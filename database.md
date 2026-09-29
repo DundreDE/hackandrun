@@ -4,8 +4,10 @@ Postgreesql
       Name
       email
       login
+      crreated at
 
     hackrun'ids
+      public
       stops
         stops etc kram
       runs
@@ -14,11 +16,9 @@ Postgreesql
 
 API ENDPOINTS:
 
-Login
+Login/Register route
 
-Register
-
-Hackrun (description name etc )
+Hackrun (description name etc owner id)
 
     Create Hackrun
 
@@ -37,3 +37,5 @@ Hackrun stops questions etc..
     Delete Hackrun-stops over Hackrun id and uuid
 
     Update Hackrun-stops over Hackrun id and uuid
+
+Participants without login every hzackrun ratelimit by 200 only editable in settings to prevent fraud
