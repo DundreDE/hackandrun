@@ -1,7 +1,9 @@
-import { integer, pgTable, serial, text } from 'drizzle-orm/pg-core';
+import { bigint, boolean, pgTable, text, timestamp } from 'drizzle-orm/pg-core';
 
-export const task = pgTable('task', {
-	id: serial('id').primaryKey(),
-	title: text('title').notNull(),
-	priority: integer('priority').notNull().default(1)
+export const posts = pgTable('posts', {
+	id: bigint('id', { mode: 'number' }).primaryKey().generatedByDefaultAsIdentity(),
+	author: text('author').notNull().default('anonymous'),
+	content: text('content').notNull(),
+	isPublished: boolean('is_published').notNull().default(false),
+	createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow()
 });
