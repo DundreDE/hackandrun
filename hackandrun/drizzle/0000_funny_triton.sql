@@ -5,3 +5,4 @@ CREATE TABLE "posts" (
 	"is_published" boolean DEFAULT false NOT NULL,
 	"created_at" timestamp with time zone DEFAULT now() NOT NULL
 );
+ 

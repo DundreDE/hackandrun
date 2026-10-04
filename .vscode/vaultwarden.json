@@ -1,0 +1,7 @@
+{
+  "project": "hackandrun",
+  "files": [
+    ".env",
+    "hackandrun/.env.local"
+  ]
+}
